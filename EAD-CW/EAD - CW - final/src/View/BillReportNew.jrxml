@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd20ced9-4930-4511-865d-7acaa3777870">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#990000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#000080">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#990000"/>
+			<bottomPen lineWidth="0.5" lineColor="#990000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFBFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#990000"/>
+			<bottomPen lineWidth="0.5" lineColor="#990000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#990000"/>
+			<bottomPen lineWidth="0.5" lineColor="#990000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="d1dcbb4b-ccc8-4dcd-82d3-b232cd4be821"/>
+	<queryString language="SQL">
+		<![CDATA[select item_id,item_name,item_price,item_qty,item_tot,bill_no,dis_rate,tot_bill from billReport,billReport2 where billReport.bill_num=billReport2.bill_no]]>
+	</queryString>
+	<field name="item_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_tot" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bill_no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dis_rate" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tot_bill" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="148" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="44" backcolor="#2E363F" uuid="ace1e849-67f7-404e-b900-27f57d374f13"/>
+			</rectangle>
+			<image>
+				<reportElement x="228" y="65" width="59" height="55" uuid="5408a25d-0af2-4498-93c4-629489fd8b72"/>
+				<imageExpression><![CDATA["E:\\My Work\\Netbeans\\EAD - CW\\EAD - CW - 2022-06-09-End\\image\\Untitled-1 - logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="316" y="72" width="244" height="48" uuid="2c21ae7b-f7be-4933-ae0a-75105b54dc5d"/>
+				<textElement>
+					<font fontName="Arial" size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JDJ Coffee Bar]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="17" width="95" height="21" uuid="bf5af993-aa9f-4f94-93a0-7326c6f1624d"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Innvoice Number   :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="159" y="18" width="100" height="20" uuid="ab0efac1-c968-49b9-b1d2-5ae376a9d32f"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="40" backcolor="#CCCCCC" uuid="89506435-e5b0-4787-b46c-21158dd5f920"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="61" y="12" width="59" height="20" uuid="41fceff1-4621-432f-a6ee-c4f85c811d5d"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="12" width="149" height="20" uuid="e303d1a9-be49-4343-8f1a-7243970bbdbb"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="12" width="89" height="20" uuid="f06462f0-8cf8-4588-8209-4a4678bc50d1"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="12" width="100" height="20" uuid="efc22c04-6227-4014-b707-53f2fed37c5c"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="616" y="12" width="69" height="20" uuid="0a199a25-2cf5-4aa3-ae58-bbfb00914f94"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="77" y="12" width="59" height="20" uuid="d3c73e92-015c-4bc8-89c9-364cb3fbdf5b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="12" width="149" height="20" uuid="5c75f116-4ddb-4502-870d-534bb1f10688"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="12" width="100" height="20" uuid="901c3957-87bb-45a9-8bd0-a20955b421cb"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="632" y="12" width="69" height="20" uuid="ae2eacb2-83fe-4e70-ba65-052bdbd4248b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_tot}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="12" width="89" height="20" uuid="18599887-dfec-4360-b993-51ac49386b27"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="135" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="91" width="752" height="44" backcolor="#2E363F" uuid="181cedfc-6479-44f4-88a6-0382603ef985"/>
+			</rectangle>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="35" y="103" width="193" height="20" forecolor="#FFFFFF" uuid="0dcb5289-b9a2-4738-9e0c-7a4e33b8613b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="632" y="103" width="100" height="20" forecolor="#FFFFFF" uuid="2f33a53e-b1ca-4bd1-9dd9-7633532486b3"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="578" y="17" width="83" height="20" uuid="e9c65abb-fe45-40d8-9b31-72876ccadf96"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Discount Rate   :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="661" y="17" width="50" height="20" uuid="51bb71be-93f6-481b-81d2-6b5d23fb4702"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dis_rate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="578" y="48" width="71" height="20" uuid="a04051f0-990f-4dbd-84ff-50ea92b95567"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Bill   :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="661" y="48" width="50" height="20" uuid="e27c1e87-06f5-48e8-92ee-e7b85a5cd270"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tot_bill}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
